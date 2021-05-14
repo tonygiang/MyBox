@@ -1,0 +1,1144 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyBox</name>
+    </assembly>
+    <members>
+        <member name="M:MyBox.Internal.Bundle`1.AddData(System.String,`0,System.Boolean)">
+            <summary>
+            Adds a data to this bundle
+            </summary>
+            <param name="dataKey">The key to identify this data</param>
+            <param name="data"></param>
+            <param name="overrideIfExists">True to override this data if it exists</param>
+        </member>
+        <member name="M:MyBox.Internal.Bundle`1.DataExists(System.String)">
+            <summary>
+            True if a data with the datakey exists
+            </summary>
+            <param name="dataKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyBox.Internal.Bundle`1.AddBundleData(System.Collections.Generic.Dictionary{System.String,`0},System.Boolean)">
+            <summary>
+            Add a bundle of data to this bundle
+            </summary>
+            <param name="bundle">The data bundle</param>
+            <param name="overrideIfExists">True to override if any of the data already exists in this data bundle</param>
+        </member>
+        <member name="M:MyBox.Internal.Bundle`1.AddBundleData(MyBox.Internal.Bundle{`0},System.Boolean)">
+            <summary>
+            Add a bundle of data to this bundle
+            </summary>
+            <param name="bundle">The data bundle</param>
+            <param name="overrideIfExists">True to override the data if it already exists in this data bundle</param>
+        </member>
+        <member name="T:MyBox.AutoPropertyAttribute">
+            <summary>
+            Automatically assign components from this GO to this Property.
+            </summary>
+        </member>
+        <member name="T:MyBox.ConditionalFieldAttribute">
+            <summary>
+            Conditionally Show/Hide field in inspector, based on some other field value
+            </summary>
+        </member>
+        <member name="M:MyBox.ConditionalFieldAttribute.#ctor(System.String,System.Boolean,System.Object[])">
+            <param name="fieldToCheck">String name of field to check value</param>
+            <param name="inverse">Inverse check result</param>
+            <param name="compareValues">On which values field will be shown in inspector</param>
+        </member>
+        <member name="T:MyBox.DefinedValuesAttribute">
+            <summary>
+            Create Popup with predefined values for string, int or float property
+            </summary>
+        </member>
+        <member name="T:MyBox.DisplayInspectorAttribute">
+            <summary>
+            Use to display inspector of property object
+            </summary>
+        </member>
+        <member name="M:MyBox.FoldoutAttribute.#ctor(System.String,System.Boolean)">
+            <summary>Adds the property to the specified foldout group.</summary>
+            <param name="name">Name of the foldout group.</param>
+            <param name="foldEverything">Toggle to put all properties to the specified group</param>
+        </member>
+        <member name="T:MyBox.InitializationFieldAttribute">
+            <summary>
+            Field will be Read-Only in Playmode
+            </summary>
+        </member>
+        <member name="T:MyBox.MustBeAssignedAttribute">
+            <summary>
+            Apply to MonoBehaviour field to assert that this field is assigned via inspector (not null, false, empty of zero) on playmode
+            </summary>
+        </member>
+        <member name="T:MyBox.SceneAttribute">
+            <summary>
+            Used to pick scene from inspector.
+            Consider to use <see cref="T:MyBox.SceneReference"/> type instead as it is more flexible
+            </summary>
+        </member>
+        <member name="T:MyBox.SearchableEnumAttribute">
+            <summary>
+            Put this attribute on a public (or SerializeField) enum in a
+            MonoBehaviour or ScriptableObject to get an improved enum selector
+            popup. The enum list is scrollable and can be filtered by typing.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyAlgorithms.Cast``1(System.IConvertible)">
+            <summary>
+            Convert to a different type.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyAlgorithms.Is``1(System.Object)">
+            <summary>
+            Check if this is a particular type.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyAlgorithms.As``1(System.Object)">
+            <summary>
+            Cast to a different type, exception-safe.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyAlgorithms.Pipe``1(``0,System.Action{``0})">
+            <summary>
+            Take an object and pass it as an argument to a void function.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyAlgorithms.Pipe``2(``0,System.Func{``0,``1})">
+            <summary>
+            Take an object, pass it as an argument to a function, return the result.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyAlgorithms.PipeKeep``2(``0,System.Func{``0,``1})">
+            <summary>
+            Take an object, pass it as an argument to a function, return the object.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyAlgorithms.Once(UnityEngine.Events.UnityEvent,UnityEngine.Events.UnityAction)">
+            <summary>
+            Adds a listener that executes only once to the UnityEvent.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyAlgorithms.Once``1(UnityEngine.Events.UnityEvent{``0},UnityEngine.Events.UnityAction{``0})">
+            <summary>
+            Adds a listener that executes only once to the UnityEvent.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyAlgorithms.Once``2(UnityEngine.Events.UnityEvent{``0,``1},UnityEngine.Events.UnityAction{``0,``1})">
+            <summary>
+            Adds a listener that executes only once to the UnityEvent.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyAlgorithms.Once``3(UnityEngine.Events.UnityEvent{``0,``1,``2},UnityEngine.Events.UnityAction{``0,``1,``2})">
+            <summary>
+            Adds a listener that executes only once to the UnityEvent.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyAlgorithms.Once``4(UnityEngine.Events.UnityEvent{``0,``1,``2,``3},UnityEngine.Events.UnityAction{``0,``1,``2,``3})">
+            <summary>
+            Adds a listener that executes only once to the UnityEvent.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.RemoveAt``1(``0[],System.Int32)">
+            <summary>
+            Returns new array without element at index
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.InsertAt``1(``0[],System.Int32)">
+            <summary>
+            Returns new array with inserted empty element at index
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.GetRandom``1(``0[])">
+            <summary>
+            Returns random element from collection
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.GetRandom``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            Returns random element from collection
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.GetRandom``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Returns random element from collection
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.IsNullOrEmpty``1(``0[])">
+            <summary>
+            Is array null or empty
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.IsNullOrEmpty``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            Is list null or empty
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.IsNullOrEmpty``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Is collection null or empty. IEnumerable is relatively slow. Use Array or List implementation if possible
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.NextIndexInCircle``1(``0[],System.Int32)">
+            <summary>
+            Get next index for circular array. <br />
+            -1 will result with last element index, Length + 1 is 0. <br />
+            If step is more that 1, you will get correct offset <br />
+            
+            <code>
+            Example (infinite loop first->last->first):
+            i = myArray.NextIndex(i++);
+            var nextItem = myArray[i];
+            </code>
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.IndexOfItem``1(System.Collections.Generic.IEnumerable{``0},``0)">
+            <returns>
+            Returns -1 if none found
+            </returns>
+        </member>
+        <member name="M:MyBox.MyCollections.ContentsMatch``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Is Elements in two collections are the same
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.ContentsMatchKeys``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Is Keys in MyDictionary is the same as some collection
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.ContentsMatchValues``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{``1})">
+            <summary>
+            Is Values in MyDictionary is the same as some collection
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.GetOrAdd``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)">
+            <summary>
+            Adds a key/value pair to the IDictionary&lt;TKey,TValue&gt; if the
+            key does not already exist. Returns the new value, or the existing
+            value if the key exists.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.GetOrAdd``2(System.Collections.Generic.IDictionary{``0,``1},``0,System.Func{``0,``1})">
+            <summary>
+            Adds a key/value pair to the IDictionary&lt;TKey,TValue&gt; by using
+            the specified function if the key does not already exist. Returns
+            the new value, or the existing value if the key exists.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.GetOrAdd``3(System.Collections.Generic.IDictionary{``0,``1},``0,System.Func{``0,``2,``1},``2)">
+            <summary>
+            Adds a key/value pair to the IDictionary&lt;TKey,TValue&gt; by using
+            the specified function and an argument if the key does not already
+            exist, or returns the existing value if the key exists.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary>
+            Performs an action on each element of a collection.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.ForEach``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
+            <summary>
+            Performs a function on each element of a collection.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0,System.Int32})">
+            <summary>
+            Performs an action on each element of a collection with its index
+            passed along.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.ForEach``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int32,``1})">
+            <summary>
+            Performs an action on each element of a collection with its index
+            passed along.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.MaxBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
+            <summary>
+            Find the element of a collection that has the highest selected value.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.MinBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
+            <summary>
+            Find the element of a collection that has the lowest selected value.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.SingleToEnumerable``1(``0)">
+            <summary>
+            Convert a single element into an enumerable with the source as the
+            single element.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.FirstIndex``1(System.Collections.Generic.IList{``0},System.Predicate{``0})">
+            <summary>
+            First index of an item that matches a predicate.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.FirstIndex``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0})">
+            <summary>
+            First index of an item that matches a predicate.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.LastIndex``1(System.Collections.Generic.IList{``0},System.Predicate{``0})">
+            <summary>
+            Last index of an item that matches a predicate.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.GetWeightedRandomIndex``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Double})">
+            <summary>
+            Returns random index from collection with weighted probabilities.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.GetWeightedRandom``1(System.Collections.Generic.IList{``0},System.Func{``0,System.Double})">
+            <summary>
+            Returns random element from collection with weighted probabilities.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCollections.GetWeightedRandom``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Double})">
+            <summary>
+            Returns random element from collection with weighted probabilities.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyColor.WithAlphaSetTo(UnityEngine.Color,System.Single)">
+            <summary>
+            Returns new Color with Alpha set to a
+            </summary>
+        </member>
+        <member name="M:MyBox.MyColor.SetAlpha(UnityEngine.UI.Graphic,System.Single)">
+            <summary>
+            Set Alpha of Image.Color
+            </summary>
+        </member>
+        <member name="M:MyBox.MyColor.SetAlpha(UnityEngine.SpriteRenderer,System.Single)">
+            <summary>
+            Set Alpha of Renderer.Color
+            </summary>
+        </member>
+        <member name="M:MyBox.MyColor.ToHex(UnityEngine.Color)">
+            <summary>
+            To string of "#b5ff4f" format
+            </summary>
+        </member>
+        <member name="M:MyBox.MyColor.Lighter(UnityEngine.Color)">
+            <summary>
+            Returns a color lighter than the given color.
+            </summary>
+            <param name="color"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyBox.MyColor.Darker(UnityEngine.Color)">
+            <summary>
+            Returns a color darker than the given color.
+            </summary>
+            <param name="color"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyBox.MyColor.BrightnessOffset(UnityEngine.Color,System.Single)">
+            <summary>
+            Brightness offset with 1 is brightest and -1 is darkest
+            </summary>
+        </member>
+        <member name="M:MyBox.MyColor.ToUnityColor(System.String)">
+            <summary>
+            Converts a HTML color string into UnityEngine.Color. See
+            UnityEngine.ColorUtility.TryParseHtmlString for conversion conditions.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCoroutines.StartCoroutine(System.Collections.IEnumerator)">
+            <summary>
+            StartCoroutine without MonoBehaviour
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCoroutines.StartNext(UnityEngine.Coroutine,System.Collections.IEnumerator)">
+            <summary>
+            Start next coroutine after this one
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCoroutines.StopCoroutine(UnityEngine.Coroutine)">
+            <summary>
+            Stop coroutine started with MyCoroutines.StartCoroutine
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCoroutines.StopAllCoroutines">
+            <summary>
+            Stop all coroutines started with MyCoroutines.StartCoroutine
+            </summary>
+        </member>
+        <member name="M:MyBox.MyCoroutines.CreateGroup(UnityEngine.MonoBehaviour)">
+            <summary>
+            CoroutineGroup allows to start bunch coroutines in one group
+            and check the amount of running coroutines (or if there is any of them)
+            </summary>
+        </member>
+        <member name="M:MyBox.MyDebug.DrawDebugBounds(UnityEngine.MeshFilter,UnityEngine.Color)">
+            <summary>
+            Draw bounds of Mesh
+            </summary>
+        </member>
+        <member name="M:MyBox.MyDebug.DrawDebugBounds(UnityEngine.MeshRenderer,UnityEngine.Color)">
+            <summary>
+            Draw bounds of MeshRenderer
+            </summary>
+        </member>
+        <member name="M:MyBox.MyDebug.DrawDebugBounds(UnityEngine.Bounds,UnityEngine.Color)">
+            <summary>
+            Draw bounds of Bounds
+            </summary>
+        </member>
+        <member name="M:MyBox.MyDebug.DrawArrowRay(UnityEngine.Vector3,UnityEngine.Vector3,System.Single,System.Single)">
+            <summary>
+            Draw directional arrow
+            </summary>
+        </member>
+        <member name="M:MyBox.MyDebug.DrawDimensionalCross(UnityEngine.Vector3,System.Single)">
+            <summary>
+            Draw XYZ dimensional RGB cross
+            </summary>
+        </member>
+        <member name="M:MyBox.MyDelayedActions.DelayedAction(System.Single,System.Action,System.Boolean)">
+            <summary>
+            Invoke Action on Delay
+            </summary>
+        </member>
+        <member name="M:MyBox.MyDelayedActions.DelayedAction(UnityEngine.MonoBehaviour,System.Single,System.Action,System.Boolean)">
+            <summary>
+            Invoke Action on Delay
+            </summary>
+        </member>
+        <member name="M:MyBox.MyDelayedActions.DelayedAction(System.Action)">
+            <summary>
+            Invoke Action next frame
+            </summary>
+        </member>
+        <member name="M:MyBox.MyDelayedActions.DelayedAction(UnityEngine.MonoBehaviour,System.Action)">
+            <summary>
+            Invoke Action next frame
+            </summary>
+        </member>
+        <member name="M:MyBox.MyDelayedActions.DelayedUiSelection(UnityEngine.GameObject)">
+            <summary>
+            Set GO as selected next frame (EventSystem.current.SetSelectedGameObject)
+            </summary>
+        </member>
+        <member name="M:MyBox.MyDelayedActions.DelayedUiSelection(UnityEngine.MonoBehaviour,UnityEngine.GameObject)">
+            <summary>
+            Set GO as selected next frame (EventSystem.current.SetSelectedGameObject)
+            </summary>
+        </member>
+        <member name="M:MyBox.MyExtensions.Swap``1(``0[],System.Int32,System.Int32)">
+            <summary>
+            Swap two elements in array
+            </summary>
+        </member>
+        <member name="M:MyBox.MyExtensions.GetObjectsOfLayerInChilds(UnityEngine.GameObject,System.Int32)">
+            <summary>
+            Get all components of specified Layer in childs
+            </summary>
+        </member>
+        <member name="M:MyBox.MyExtensions.GetObjectsOfLayerInChilds(UnityEngine.GameObject,System.String)">
+            <summary>
+            Get all components of specified Layer in childs
+            </summary>
+        </member>
+        <member name="M:MyBox.MyExtensions.GetObjectsOfLayerInChilds(UnityEngine.Component,System.String)">
+            <summary>
+            Get all components of specified Layer in childs
+            </summary>
+        </member>
+        <member name="M:MyBox.MyExtensions.GetObjectsOfLayerInChilds(UnityEngine.Component,System.Int32)">
+            <summary>
+            Get all components of specified Layer in childs
+            </summary>
+        </member>
+        <member name="M:MyBox.MyExtensions.SetBodyState(UnityEngine.Rigidbody,System.Boolean)">
+            <summary>
+            Swap Rigidbody IsKinematic and DetectCollisions
+            </summary>
+            <param name="body"></param>
+            <param name="state"></param>
+        </member>
+        <member name="M:MyBox.MyExtensions.FindObjectsOfInterface``1">
+            <summary>
+            Find all Components of specified interface
+            </summary>
+        </member>
+        <member name="M:MyBox.MyExtensions.FindObjectsOfInterfaceAsComponents``1">
+            <summary>
+            Find all Components of specified interface along with Component itself
+            </summary>
+        </member>
+        <member name="M:MyBox.MyExtensions.OnePerInstance``1(``0[])">
+            <summary>
+            Get components with unique Instance ID
+            </summary>
+        </member>
+        <member name="M:MyBox.MyExtensions.OneHitPerInstance(UnityEngine.RaycastHit2D[])">
+            <summary>
+            Get hits with unique owner Instance ID
+            </summary>
+        </member>
+        <member name="M:MyBox.MyExtensions.OneHitPerInstance(UnityEngine.Collider2D[])">
+            <summary>
+            Get colliders with unique owner Instance ID
+            </summary>
+        </member>
+        <member name="M:MyBox.MyExtensions.OneHitPerInstanceList(UnityEngine.Collider2D[])">
+            <summary>
+            Get colliders with unique owner Instance ID
+            </summary>
+        </member>
+        <member name="M:MyBox.MyInput.GetNumberDown(System.Int32)">
+            <summary>
+            Is number key pressed (Numpad included)
+            </summary>
+        </member>
+        <member name="M:MyBox.MyInput.GetNumberDown(UnityEngine.KeyCode)">
+            <summary>
+            Is KeyCode is number (Numpad included)
+            </summary>
+            <returns>If KeyCode is not a number returns -1</returns>
+        </member>
+        <member name="M:MyBox.MyInput.GetNumberDown">
+            <summary>
+            Is Input.GetKeyDown is number (Numpad included)
+            </summary>
+            <returns>If none pressed returns -1</returns>
+        </member>
+        <member name="M:MyBox.MyInput.ToReadableString(UnityEngine.KeyCode,System.Boolean)">
+            <summary>
+            Convert KeyCode to read-friendly format
+            Full = "Left Mouse Button", otherwise "LMB"
+            </summary>
+        </member>
+        <member name="M:MyBox.MyInput.AnyKeyDown(UnityEngine.KeyCode,UnityEngine.KeyCode)">
+            <summary>
+            key1 or key2 is pressed
+            </summary>
+        </member>
+        <member name="M:MyBox.MyInput.AnyKeyDown(UnityEngine.KeyCode,UnityEngine.KeyCode,UnityEngine.KeyCode)">
+            <summary>
+            key1, key2 or key3 is pressed
+            </summary>
+        </member>
+        <member name="M:MyBox.MyInput.IsLeft">
+            <summary>
+            "A", "Left Arrow" and "Numpad 4"
+            </summary>
+        </member>
+        <member name="M:MyBox.MyInput.IsRight">
+            <summary>
+            "D", "Right Arrow" and "Numpad 6"
+            </summary>
+        </member>
+        <member name="M:MyBox.MyInput.IsUp">
+            <summary>
+            "W", "Up Arrow" and "Numpad 8"
+            </summary>
+        </member>
+        <member name="M:MyBox.MyInput.IsDown">
+            <summary>
+            "S", "Down Arrow" and "Numpad 2"
+            </summary>
+        </member>
+        <member name="M:MyBox.MyInput.KeypadDirection">
+            <summary>
+            Roguelike movement input, where top-left is 7 and bottom-right is 3 
+            </summary>
+        </member>
+        <member name="M:MyBox.MyInput.KeypadX">
+            <summary>
+            Roguelike movement input on X axis
+            </summary>
+            <returns>1 if moved to  right/bottom-right/top-right, -1 if moved to left/bottom-left/top-left, </returns>
+        </member>
+        <member name="M:MyBox.MyInput.KeypadY">
+            <summary>
+            Roguelike movement input on Y axis
+            </summary>
+            <returns>1 if moved to top/top-left/top-right, -1 if moved to bottom/bottom-left/bottom-right</returns>
+        </member>
+        <member name="M:MyBox.MyMath.Swap``1(``0@,``0@)">
+            <summary>
+            Swap two reference values
+            </summary>
+        </member>
+        <member name="M:MyBox.MyMath.Snap(System.Single,System.Single)">
+            <summary>
+            Snap to grid of "round" size
+            </summary>
+        </member>
+        <member name="M:MyBox.MyMath.Sign(System.IComparable)">
+            <summary>
+            Returns the sign 1/-1 evaluated at the given value.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyMath.Approximately(System.Single,System.Single)">
+            <summary>
+            Shortcut for Mathf.Approximately
+            </summary>
+        </member>
+        <member name="M:MyBox.MyMath.InRange01(System.Single)">
+            <summary>
+            Value is in [0, 1) range.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyMath.InRange``1(``0,``0,``0)">
+            <summary>
+            Value is in [closedLeft, openRight) range.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyMath.InRange(System.Single,MyBox.RangedFloat)">
+            <summary>
+            Value is in a RangedFloat.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyMath.InRange(System.Int32,MyBox.RangedInt)">
+            <summary>
+            Value is in a RangedInt.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyMath.InRangeInclusive``1(``0,``0,``0)">
+            <summary>
+            Value is in [closedLeft, closedRight] range, max-inclusive.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyMath.InRangeInclusive(System.Single,MyBox.RangedFloat)">
+            <summary>
+            Value is in a RangedFloat, max-inclusive.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyMath.InRangeInclusive(System.Int32,MyBox.RangedInt)">
+            <summary>
+            Value is in a RangedInt, max-inclusive.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyMath.NotInRange(System.Single,System.Single,System.Single)">
+            <summary>
+            Clamp value to less than min or more than max
+            </summary>
+        </member>
+        <member name="M:MyBox.MyMath.NotInRange(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Clamp value to less than min or more than max
+            </summary>
+        </member>
+        <member name="M:MyBox.MyMath.ClosestPoint(System.Single,System.Single,System.Single)">
+            <summary>
+            Return point A or B, closest to num
+            </summary>
+        </member>
+        <member name="M:MyBox.MyMath.ClosestPointIsA(System.Single,System.Single,System.Single)">
+            <summary>
+            Check if pointA closer to num than pointB
+            </summary>
+        </member>
+        <member name="M:MyBox.MyNavMesh.GetLength(UnityEngine.AI.NavMeshPath)">
+            <summary>
+            Get length of path (combining all corners)
+            </summary>
+            <param name="path">Path to calculate</param>
+            <returns>Length in Units</returns>
+        </member>
+        <member name="M:MyBox.MyNavMesh.GetTimeToPass(UnityEngine.AI.NavMeshPath,System.Single)">
+            <summary>
+            Roughly calculate time to traverse the path with given speed
+            </summary>
+            <param name="path">Path to calculate</param>
+            <param name="speed">Speed of the agent</param>
+            <returns>Time in seconds</returns>
+        </member>
+        <member name="M:MyBox.MyNavMesh.GetPointOnPath(UnityEngine.AI.NavMeshPath,System.Single)">
+            <summary>
+            Get point on path
+            </summary>
+            <param name="path">Path to calculate</param>
+            <param name="rate">Percent on path, from 0 to 1</param>
+        </member>
+        <member name="M:MyBox.MyNavMesh.GetPointsOnPath(UnityEngine.AI.NavMeshPath,System.Single)">
+            <summary>
+            Split path on points with defined distance
+            </summary>
+            <param name="path">Path to calculate</param>
+            <param name="distance">Distance between points on path</param>
+        </member>
+        <member name="M:MyBox.MyString.ToCamelCase(System.String)">
+            <summary>
+            "Camel case string" => "CamelCaseString" 
+            </summary>
+        </member>
+        <member name="M:MyBox.MyString.SplitCamelCase(System.String)">
+            <summary>
+            "CamelCaseString" => "Camel Case String"
+            </summary>
+        </member>
+        <member name="M:MyBox.MyString.AsEnum``1(System.String,System.Boolean)">
+            <summary>
+            Convert a string value to an Enum value.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyString.ToRoman(System.Int32)">
+            <summary>
+            Number presented in Roman numerals
+            </summary>
+        </member>
+        <member name="M:MyBox.MyString.SurroundedWith(System.String,System.String)">
+            <summary>
+            Get the "message" string with the "surround" string at the both sides 
+            </summary>
+        </member>
+        <member name="M:MyBox.MyString.SurroundedWith(System.String,System.String,System.String)">
+            <summary>
+            Get the "message" string with the "start" at the beginning and "end" at the end of the string
+            </summary>
+        </member>
+        <member name="M:MyBox.MyString.Colored(System.String,MyBox.Colors)">
+            <summary>
+            Surround string with "color" tag
+            </summary>
+        </member>
+        <member name="M:MyBox.MyString.Colored(System.String,UnityEngine.Color)">
+            <summary>
+            Surround string with "color" tag
+            </summary>
+        </member>
+        <member name="M:MyBox.MyString.Colored(System.String,System.String)">
+            <summary>
+            Surround string with "color" tag
+            </summary>
+        </member>
+        <member name="M:MyBox.MyString.Sized(System.String,System.Int32)">
+            <summary>
+            Surround string with "size" tag
+            </summary>
+        </member>
+        <member name="M:MyBox.MyString.Underlined(System.String)">
+            <summary>
+            Surround string with "u" tag
+            </summary>
+        </member>
+        <member name="M:MyBox.MyString.Bold(System.String)">
+            <summary>
+            Surround string with "b" tag
+            </summary>
+        </member>
+        <member name="M:MyBox.MyString.Italics(System.String)">
+            <summary>
+            Surround string with "i" tag
+            </summary>
+        </member>
+        <member name="T:MyBox.Colors">
+            <summary>
+            Represents list of supported by Unity Console color names
+            </summary>
+        </member>
+        <member name="M:MyBox.MyTexture.AsSprite(UnityEngine.Texture2D)">
+            <summary>
+            Create new sprite out of Texture
+            </summary>
+        </member>
+        <member name="M:MyBox.MyTexture.Resample(UnityEngine.Texture2D,System.Int32,System.Int32)">
+            <summary>
+            Change texture size (and scale accordingly)
+            </summary>
+        </member>
+        <member name="M:MyBox.MyTexture.Crop(UnityEngine.Texture2D,System.Int32,System.Int32,System.Int32,System.Int32,System.Single)">
+            <summary>
+            Crop texture to desired size.
+            Somehow cropped image seemed darker, brightness offset may fix this
+            </summary>
+        </member>
+        <member name="M:MyBox.MyTexture.WithSolidColor(UnityEngine.Texture2D,UnityEngine.Color)">
+            <summary>
+            Will texture with solid color
+            </summary>
+        </member>
+        <member name="M:MyBox.MyUI.SetCanvasState(UnityEngine.CanvasGroup,System.Boolean)">
+            <summary>
+            Toggle CanvasGroup Alpha, Interactable and BlocksRaycasts settings
+            </summary>
+        </member>
+        <member name="M:MyBox.MyUI.SetState(UnityEngine.CanvasGroup,System.Boolean)">
+            <summary>
+            Toggle CanvasGroup Alpha, Interactable and BlocksRaycasts settings
+            </summary>
+        </member>
+        <member name="M:MyBox.MyUI.OnEventSubscribe(UnityEngine.EventSystems.EventTrigger,UnityEngine.EventSystems.EventTriggerType,System.Action{UnityEngine.EventSystems.BaseEventData})">
+            <summary>
+            Create EventTriggerType Callback entry and subscribe to EventTrigger
+            </summary>
+        </member>
+        <member name="M:MyBox.MyUI.OnEventUnsubscribe(UnityEngine.EventSystems.EventTrigger,UnityEngine.EventSystems.EventTrigger.Entry)">
+            <summary>
+            Unsubscribe Callback entry from EventTrigger
+            </summary>
+        </member>
+        <member name="M:MyBox.MyVectors.ResetPosition(UnityEngine.Transform)">
+            <summary>
+            Set position to Vector3.zero.
+            </summary>
+        </member>
+        <member name="M:MyBox.MyVectors.SnapValue(UnityEngine.Vector3,System.Single)">
+            <summary>
+            Snap to grid of snapValue
+            </summary>
+        </member>
+        <member name="M:MyBox.MyVectors.SnapValue(UnityEngine.Vector2,System.Single)">
+            <summary>
+            Snap to grid of snapValue
+            </summary>
+        </member>
+        <member name="M:MyBox.MyVectors.SnapPosition(UnityEngine.Transform,System.Single)">
+            <summary>
+            Snap position to grid of snapValue
+            </summary>
+        </member>
+        <member name="M:MyBox.MyVectors.SnapToOne(UnityEngine.Vector2)">
+            <summary>
+            Snap to one unit grid
+            </summary>
+        </member>
+        <member name="M:MyBox.MyVectors.SnapToOne(UnityEngine.Vector3)">
+            <summary>
+            Snap to one unit grid
+            </summary>
+        </member>
+        <member name="M:MyBox.MyVectors.GetClosest(UnityEngine.Vector3,System.Collections.Generic.IEnumerable{UnityEngine.Vector3})">
+            <summary>
+            Finds the position closest to the given one.
+            </summary>
+            <param name="position">World position.</param>
+            <param name="otherPositions">Other world positions.</param>
+            <returns>Closest position.</returns>
+        </member>
+        <member name="M:MyBox.MyVectors.To(UnityEngine.Vector4,UnityEngine.Vector4)">
+            <summary>
+            Get vector from source to destination
+            </summary>
+        </member>
+        <member name="M:MyBox.MyVectors.To(UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>
+            Get vector from source to destination
+            </summary>
+        </member>
+        <member name="M:MyBox.MyVectors.To(UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>
+            Get vector from source to destination
+            </summary>
+        </member>
+        <member name="M:MyBox.MyVectors.To(UnityEngine.Component,UnityEngine.Component)">
+            <summary>
+            Get vector from source to target
+            </summary>
+        </member>
+        <member name="M:MyBox.MyVectors.To(UnityEngine.Component,UnityEngine.GameObject)">
+            <summary>
+            Get vector from source to target
+            </summary>
+        </member>
+        <member name="M:MyBox.MyVectors.To(UnityEngine.GameObject,UnityEngine.Component)">
+            <summary>
+            Get vector from source to target
+            </summary>
+        </member>
+        <member name="M:MyBox.MyVectors.To(UnityEngine.GameObject,UnityEngine.GameObject)">
+            <summary>
+            Get vector from source to target
+            </summary>
+        </member>
+        <member name="M:MyBox.MyVectors.To(UnityEngine.Vector3,UnityEngine.GameObject)">
+            <summary>
+            Get vector from source to target
+            </summary>
+        </member>
+        <member name="M:MyBox.MyVectors.To(UnityEngine.Vector3,UnityEngine.Component)">
+            <summary>
+            Get vector from source to target
+            </summary>
+        </member>
+        <member name="M:MyBox.MyVectors.To(UnityEngine.GameObject,UnityEngine.Vector3)">
+            <summary>
+            Get vector from source to destination
+            </summary>
+        </member>
+        <member name="M:MyBox.MyVectors.To(UnityEngine.Component,UnityEngine.Vector3)">
+            <summary>
+            Get vector from source to destination
+            </summary>
+        </member>
+        <member name="T:MyBox.TransformShakeExtension">
+            <summary>
+            StartShake and StopShake for transform. Use for screenshake on camera transform for instance
+            </summary>
+        </member>
+        <member name="F:MyBox.TransformShakeExtension._activeShakingTransforms">
+            <summary>
+            Coroutine and Initial Position for transform 
+            </summary>
+        </member>
+        <member name="M:MyBox.TransformShakeExtension.StartShake(UnityEngine.Transform,System.Single,System.Single,System.Boolean,System.Boolean)">
+            <summary>
+            Shake transform, like for screenshake on camera transform
+            </summary>
+            <param name="transform">Transform to shake</param>
+            <param name="time">Shake time. -1 for infinite shaking</param>
+            <param name="shakeBounds">Shake amplitude in units</param>
+            <param name="useUnscaledTime">Shake time should be affected by Time.timeScale or not</param>
+            <param name="fadeBounds">Fade bounds to zero to the end of the shake</param>
+        </member>
+        <member name="M:MyBox.TransformShakeExtension.StopShake(UnityEngine.Transform)">
+            <summary>
+            Stop Shake for transform, if shaking now
+            </summary>
+        </member>
+        <member name="T:MyBox.IPrepare">
+            <summary>
+            Prepare() called on every MonoBehaviour by IPrepareFeature class. If Prepare() returns true, parent scene will be marked dirty 
+            </summary>
+        </member>
+        <member name="M:MyBox.ImageStringConverter.ImageFromString(System.String,System.Int32,System.Int32)">
+            <summary>
+            Use "Tools/MyBox/String Image Converter" to get string image representation
+            </summary>
+        </member>
+        <member name="T:MyBox.MySceneBundle">
+            <summary>
+            For passing objects between different scenes in Unity.
+            </summary>
+        </member>
+        <member name="P:MyBox.MySceneBundle.SceneBundleTransferOption">
+            <summary>
+            Set the option for when will the scene bundle transfer.
+            </summary>
+        </member>
+        <member name="M:MyBox.MySceneBundle.CarryOverCurrentBundleToNextBundle(System.Boolean)">
+            <summary>
+            Carry over all data in the current bundle to the next bundle.
+            </summary>
+            <param name="overrideData">True to override any data in the next bundle.</param>
+        </member>
+        <member name="M:MyBox.MySceneBundle.AddStringDataToBundle(System.String,System.String,System.Boolean)">
+            <summary>
+            Add a string value data that will be carried over to the next scene.
+            </summary>
+            <param name="dataKey">The key to identify the data you are storing.</param>
+            <param name="data"></param>
+            <param name="overrideIfExists">True to override if a data with the same key already exists</param>
+        </member>
+        <member name="M:MyBox.MySceneBundle.AddFloatDataToBundle(System.String,System.Single,System.Boolean)">
+            <summary>
+            Add a float value data that will be carried over to the next scene.
+            </summary>
+            <param name="dataKey">The key to identify the data you are storing.</param>
+            <param name="data"></param>
+            <param name="overrideIfExists">True to override if a data with the same key already exists</param>
+        </member>
+        <member name="M:MyBox.MySceneBundle.AddIntDataToBundle(System.String,System.Int32,System.Boolean)">
+            <summary>
+            Add a integer value data that will be carried over to the next scene.
+            </summary>
+            <param name="dataKey">The key to identify the data you are storing.</param>
+            <param name="data"></param>
+            <param name="overrideIfExists">True to override if a data with the same key already exists</param>
+        </member>
+        <member name="M:MyBox.MySceneBundle.AddBoolDataToBundle(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Add a bool value data that will be carried over to the next scene.
+            </summary>
+            <param name="dataKey">The key to identify the data you are storing.</param>
+            <param name="data"></param>
+            <param name="overrideIfExists">True to override if a data with the same key already exists</param>
+        </member>
+        <member name="M:MyBox.MySceneBundle.AddObjectDataToBundle(System.String,System.Object,System.Boolean)">
+            <summary>
+            Add a object value data that will be carried over to the next scene.
+            </summary>
+            <param name="dataKey">The key to identify the data you are storing.</param>
+            <param name="data"></param>
+            <param name="overrideIfExists">True to override if a data with the same key already exists</param>
+        </member>
+        <member name="M:MyBox.MySceneBundle.TryGetStringDataFromBundle(System.String,System.String@)">
+            <summary>
+            Try to fetch a string data from the bundle that was passed from the previous scene.
+            </summary>
+            <param name="dataKey">The identifier for the data to fetch</param>
+            <param name="result">Result of the data (Default or null if it does not exists)</param>
+            <returns>True if the data with the key exists.</returns>
+        </member>
+        <member name="M:MyBox.MySceneBundle.TryGetFloatDataFromBundle(System.String,System.Single@)">
+            <summary>
+            Try to fetch a float data from the bundle that was passed from the previous scene.
+            </summary>
+            <param name="dataKey">The identifier for the data to fetch</param>
+            <param name="result">Result of the data (Default or null if it does not exists)</param>
+            <returns>True if the data with the key exists.</returns>
+        </member>
+        <member name="M:MyBox.MySceneBundle.TryGetIntDataFromBundle(System.String,System.Int32@)">
+            <summary>
+            Try to fetch an integer data from the bundle that was passed from the previous scene.
+            </summary>
+            <param name="dataKey">The identifier for the data to fetch</param>
+            <param name="result">Result of the data (Default or null if it does not exists)</param>
+            <returns>True if the data with the key exists.</returns>
+        </member>
+        <member name="M:MyBox.MySceneBundle.TryGetBoolDataFromBundle(System.String,System.Boolean@)">
+            <summary>
+            Try to fetch a bool data from the bundle that was passed from the previous scene.
+            </summary>
+            <param name="dataKey">The identifier for the data to fetch</param>
+            <param name="result">Result of the data (Default or null if it does not exists)</param>
+            <returns>True if the data with the key exists.</returns>
+        </member>
+        <member name="M:MyBox.MySceneBundle.TryGetObjectDataFromBundle(System.String,System.Object@)">
+            <summary>
+            Try to fetch an object data from the bundle that was passed from the previous scene.
+            </summary>
+            <param name="dataKey">The identifier for the data to fetch</param>
+            <param name="result">Result of the data (Default or null if it does not exists)</param>
+            <returns>True if the data with the key exists.</returns>
+        </member>
+        <member name="T:MyBox.WarningsPool">
+            <summary>
+            This pool is used to prevent warning message spamming.
+            If something was logged once it wont be logged again
+            </summary>
+        </member>
+        <member name="T:MyBox.CollectionWrapper`1">
+            <summary>
+            CollectionWrapper used to apply custom drawers to Array fields
+            </summary>
+        </member>
+        <member name="T:MyBox.GuidComponent">
+            <summary>
+            This component gives a GameObject a stable, non-replicatable Globally Unique IDentifier.
+            It can be used to reference a specific instance of an object no matter where it is.
+            This can also be used for other systems, such as Save/Load game
+            </summary>
+        </member>
+        <member name="T:MyBox.GuidManager">
+            <summary>
+            Class to handle registering and accessing objects by GUID
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:MyBox.GuidReference" -->
+        <member name="M:MyBox.MinMaxExtensions.IsInRange(MyBox.MinMaxInt,System.Int32)">
+            <summary>
+            Value is in range of min and max
+            </summary>
+        </member>
+        <member name="M:MyBox.MinMaxExtensions.IsInRange(MyBox.MinMaxFloat,System.Single)">
+            <summary>
+            Value is in range of min and max
+            </summary>
+        </member>
+        <member name="M:MyBox.MinMaxExtensions.Clamp(MyBox.MinMaxInt,System.Int32)">
+            <summary>
+            Clamp value between MinMax values
+            </summary>
+        </member>
+        <member name="M:MyBox.MinMaxExtensions.Clamp(MyBox.MinMaxFloat,System.Single)">
+            <summary>
+            Clamp value between MinMax values
+            </summary>
+        </member>
+        <member name="M:MyBox.MinMaxExtensions.Length(MyBox.MinMaxInt)">
+            <summary>
+            Distance from Min to Max
+            </summary>
+        </member>
+        <member name="M:MyBox.MinMaxExtensions.Length(MyBox.MinMaxFloat)">
+            <summary>
+            Distance from Min to Max
+            </summary>
+        </member>
+        <member name="M:MyBox.MinMaxExtensions.MidPoint(MyBox.MinMaxInt)">
+            <summary>
+            Point between Min and Max
+            </summary>
+        </member>
+        <member name="M:MyBox.MinMaxExtensions.MidPoint(MyBox.MinMaxFloat)">
+            <summary>
+            Point between Min and Max
+            </summary>
+        </member>
+        <member name="M:MyBox.MinMaxExtensions.Lerp(MyBox.MinMaxInt,System.Single)">
+            <summary>
+            Lerp from Min to Max
+            </summary>
+        </member>
+        <member name="M:MyBox.MinMaxExtensions.Lerp(MyBox.MinMaxFloat,System.Single)">
+            <summary>
+            Lerp from Min to Max
+            </summary>
+        </member>
+        <member name="M:MyBox.MinMaxExtensions.LerpUnclamped(MyBox.MinMaxInt,System.Single)">
+            <summary>
+            Lerp from Min to Max
+            </summary>
+        </member>
+        <member name="M:MyBox.MinMaxExtensions.LerpUnclamped(MyBox.MinMaxFloat,System.Single)">
+            <summary>
+            Lerp from Min to Max
+            </summary>
+        </member>
+        <member name="M:MyBox.MinMaxExtensions.RandomInRange(MyBox.MinMaxInt)">
+            <summary>
+            Return a random int within [minInclusive..maxExclusive)
+            </summary>
+        </member>
+        <member name="M:MyBox.MinMaxExtensions.RandomInRange(MyBox.MinMaxFloat)">
+            <summary>
+            Return a random int within [minInclusive..maxExclusive)
+            </summary>
+        </member>
+        <member name="M:MyBox.MinMaxExtensions.RandomInRangeInclusive(MyBox.MinMaxInt)">
+            <summary>
+            Return a random int within [minInclusive..maxInclusive]
+            </summary>
+        </member>
+        <member name="M:MyBox.MinMaxExtensions.RandomInRangeInclusive(MyBox.MinMaxFloat)">
+            <summary>
+            Return a random int within [minInclusive..maxInclusive]
+            </summary>
+        </member>
+        <member name="T:MyBox.OptionalMinMax">
+            <summary>
+            Type to set Min/Max values but with optional Min and Max
+            </summary>
+        </member>
+        <member name="T:MyBox.SceneReference">
+            <summary>
+            Class used to serialize a reference to a scene asset that can be used
+            at runtime in a build, when the asset can no longer be directly
+            referenced. This caches the scene name based on the SceneAsset to use
+            at runtime to load.
+            </summary>
+        </member>
+        <member name="T:MyBox.SceneReference.SceneLoadException">
+            <summary>
+            Exception that is raised when there is an issue resolving and
+            loading a scene reference.
+            </summary>
+        </member>
+        <member name="T:MyBox.UIRelativePosition">
+            <summary>
+            Pivot and Anchor of Target makes no difference.
+            Current Pivot and "Target Anchor" property used for positioning.
+            </summary>
+        </member>
+        <member name="T:MyBox.UISizeBy">
+            <summary>
+            Set size of RectTransform by some other RectTransform
+            </summary>
+        </member>
+        <member name="F:FPSCounter._idleTime">
+            <summary>
+            Skip some time at start to skip performance drop on game start
+            and produce more accurate Avg FPS
+            </summary>
+        </member>
+    </members>
+</doc>
